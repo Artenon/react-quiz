@@ -1,0 +1,25 @@
+.menu {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: white;
+    transition: all .3s ease-in-out;
+    z-index: 100;
+}
+
+.menu:hover {
+    opacity: .6;
+}
+
+.menu.open{
+    left: 250px;
+}
+
+.menu.open::after {
+    content: '\2716';
+}
+
+.menu.closed::after {
+    content: '\2630';
+}

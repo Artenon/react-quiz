@@ -1,0 +1,36 @@
+.finishedQuiz {
+    border: 2px solid white;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.finishedQuiz ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+i {
+    margin-left: 5px;
+}
+
+i.right::after {
+    content: '\2713';
+    color: rgb(10, 255, 0);
+}
+
+i.wrong::after {
+    content: '\2716';
+    color: rgb(230, 10, 10);
+}
+
+.retry {
+    background: #2884f6;
+}
+
+.toQuizList {
+    background: yellowgreen;
+    color: black;
+    margin-left: 10px;
+}

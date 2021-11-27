@@ -1,0 +1,25 @@
+.answerItem {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    margin-left: -40px;
+    cursor: pointer;
+    transition: background .1s ease-in-out;
+}
+
+.answerItem:hover {
+    background: rgba(255, 255, 255, .3);
+}
+
+.answerItem:active {
+    background: rgba(255, 255, 255, .2);
+}
+
+.answerItem.right {
+    background: rgba(10, 255, 0, 0.7);
+}
+
+.answerItem.wrong {
+    background: rgba(230, 10, 10, 0.7);
+}
