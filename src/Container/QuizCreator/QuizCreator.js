@@ -66,13 +66,20 @@ export default class QuizCreator extends Component {
         })
     }
 
-    createQuiz = event => {
+    createQuiz = async event => {
         event.preventDefault()
-        axios.post('https://react-quiz-2a49b-default-rtdb.firebaseio.com/quizes.json', this.state.quiz)
-            .then(response => {
-                console.log(response)
+
+        try {
+            await axios.post('https://react-quiz-2a49b-default-rtdb.firebaseio.com/quizes.json', this.state.quiz)
+            this.setState({
+                quiz: [],
+                rightAnswerId: 1,
+                isFormValid: false,
+                formControls: createFormControls()
             })
-            .catch(error => console.log(error))
+        } catch(error) {
+            console.log(error)
+        }
     }
 
     onChange = (value, controlName) => {

@@ -35,6 +35,10 @@ class Quiz extends React.Component {
         ]
     }
 
+    componentDidMount() {
+        console.log(this.props.match)
+    }
+
     onClickAnswer = answerId => {
         if (this.state.answerState) {
             const key = Object.keys(this.state.answerState)
